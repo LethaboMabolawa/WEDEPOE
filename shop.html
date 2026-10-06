@@ -12,6 +12,8 @@
   <header>
     <nav class="nav">
       <a href="index.html" class="logo">Cookie Crumbles</a>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle-input">
+      <label for="nav-toggle" class="nav-toggle" aria-label="Open or close the menu"><span></span></label>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
@@ -36,7 +38,11 @@
         <h2>All flavours</h2>
         <div class="card-grid">
         <article class="card">
-          <img src="images/chocolate-chip.svg" alt="Classic Chocolate Chip cookie">
+          <picture>
+            <source type="image/webp" srcset="images/chocolate-chip-400.webp 400w, images/chocolate-chip-800.webp 800w, images/chocolate-chip-1200.webp 1200w" sizes="(min-width: 62em) 30vw, (min-width: 48em) 45vw, 92vw">
+            <img src="images/chocolate-chip-800.jpg" srcset="images/chocolate-chip-400.jpg 400w, images/chocolate-chip-800.jpg 800w, images/chocolate-chip-1200.jpg 1200w" sizes="(min-width: 62em) 30vw, (min-width: 48em) 45vw, 92vw"
+                 alt="Classic Chocolate Chip cookie" width="800" height="560" loading="lazy">
+          </picture>
           <div class="card-body">
             <h3>Classic Chocolate Chip</h3>
             <p>Golden, chewy and loaded with dark chocolate chunks.</p>
@@ -45,7 +51,11 @@
           </div>
         </article>
         <article class="card">
-          <img src="images/double-chocolate.svg" alt="Double Chocolate cookie">
+          <picture>
+            <source type="image/webp" srcset="images/double-chocolate-400.webp 400w, images/double-chocolate-800.webp 800w, images/double-chocolate-1200.webp 1200w" sizes="(min-width: 62em) 30vw, (min-width: 48em) 45vw, 92vw">
+            <img src="images/double-chocolate-800.jpg" srcset="images/double-chocolate-400.jpg 400w, images/double-chocolate-800.jpg 800w, images/double-chocolate-1200.jpg 1200w" sizes="(min-width: 62em) 30vw, (min-width: 48em) 45vw, 92vw"
+                 alt="Double Chocolate cookie" width="800" height="560" loading="lazy">
+          </picture>
           <div class="card-body">
             <h3>Double Chocolate</h3>
             <p>Rich cocoa dough with melted chocolate pools.</p>
@@ -54,7 +64,11 @@
           </div>
         </article>
         <article class="card">
-          <img src="images/red-velvet.svg" alt="Red Velvet cookie">
+          <picture>
+            <source type="image/webp" srcset="images/red-velvet-400.webp 400w, images/red-velvet-800.webp 800w, images/red-velvet-1200.webp 1200w" sizes="(min-width: 62em) 30vw, (min-width: 48em) 45vw, 92vw">
+            <img src="images/red-velvet-800.jpg" srcset="images/red-velvet-400.jpg 400w, images/red-velvet-800.jpg 800w, images/red-velvet-1200.jpg 1200w" sizes="(min-width: 62em) 30vw, (min-width: 48em) 45vw, 92vw"
+                 alt="Red Velvet cookie" width="800" height="560" loading="lazy">
+          </picture>
           <div class="card-body">
             <h3>Red Velvet</h3>
             <p>Soft and tangy with white chocolate chips.</p>
@@ -63,7 +77,11 @@
           </div>
         </article>
         <article class="card">
-          <img src="images/oatmeal-raisin.svg" alt="Oatmeal Raisin cookie">
+          <picture>
+            <source type="image/webp" srcset="images/oatmeal-raisin-400.webp 400w, images/oatmeal-raisin-800.webp 800w, images/oatmeal-raisin-1200.webp 1200w" sizes="(min-width: 62em) 30vw, (min-width: 48em) 45vw, 92vw">
+            <img src="images/oatmeal-raisin-800.jpg" srcset="images/oatmeal-raisin-400.jpg 400w, images/oatmeal-raisin-800.jpg 800w, images/oatmeal-raisin-1200.jpg 1200w" sizes="(min-width: 62em) 30vw, (min-width: 48em) 45vw, 92vw"
+                 alt="Oatmeal Raisin cookie" width="800" height="560" loading="lazy">
+          </picture>
           <div class="card-body">
             <h3>Oatmeal Raisin</h3>
             <p>Hearty oats, plump raisins and a hint of cinnamon.</p>
@@ -72,7 +90,11 @@
           </div>
         </article>
         <article class="card">
-          <img src="images/peanut-butter.svg" alt="Peanut Butter cookie">
+          <picture>
+            <source type="image/webp" srcset="images/peanut-butter-400.webp 400w, images/peanut-butter-800.webp 800w, images/peanut-butter-1200.webp 1200w" sizes="(min-width: 62em) 30vw, (min-width: 48em) 45vw, 92vw">
+            <img src="images/peanut-butter-800.jpg" srcset="images/peanut-butter-400.jpg 400w, images/peanut-butter-800.jpg 800w, images/peanut-butter-1200.jpg 1200w" sizes="(min-width: 62em) 30vw, (min-width: 48em) 45vw, 92vw"
+                 alt="Peanut Butter cookie" width="800" height="560" loading="lazy">
+          </picture>
           <div class="card-body">
             <h3>Peanut Butter</h3>
             <p>Nutty, crumbly and just sweet enough.</p>
@@ -81,7 +103,11 @@
           </div>
         </article>
         <article class="card">
-          <img src="images/salted-caramel.svg" alt="Salted Caramel cookie">
+          <picture>
+            <source type="image/webp" srcset="images/salted-caramel-400.webp 400w, images/salted-caramel-800.webp 800w, images/salted-caramel-1200.webp 1200w" sizes="(min-width: 62em) 30vw, (min-width: 48em) 45vw, 92vw">
+            <img src="images/salted-caramel-800.jpg" srcset="images/salted-caramel-400.jpg 400w, images/salted-caramel-800.jpg 800w, images/salted-caramel-1200.jpg 1200w" sizes="(min-width: 62em) 30vw, (min-width: 48em) 45vw, 92vw"
+                 alt="Salted Caramel cookie" width="800" height="560" loading="lazy">
+          </picture>
           <div class="card-body">
             <h3>Salted Caramel</h3>
             <p>Buttery caramel centre finished with sea salt.</p>
@@ -126,8 +152,10 @@
       </div>
       <div>
         <h4>Follow us</h4>
-        <p><a href="https://www.instagram.com" target="_blank" rel="noopener">Instagram</a><br>
-        <a href="https://www.facebook.com" target="_blank" rel="noopener">Facebook</a></p>
+        <div class="footer-social">
+          <a href="https://www.instagram.com" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg> Instagram</a>
+          <a href="https://www.facebook.com" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg> Facebook</a>
+        </div>
       </div>
     </div>
     <p class="footer-bottom">&copy; 2026 Cookie Crumbles. All rights reserved.</p>
