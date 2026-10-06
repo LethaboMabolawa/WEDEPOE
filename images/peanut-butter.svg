@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420">
+<rect width="600" height="420" fill="#fbeccb"/>
+<circle cx="300" cy="215" r="150" fill="#00000018"/>
+<circle cx="300" cy="205" r="150" fill="#d6a04a"/>
+<circle cx="300" cy="205" r="150" fill="none" stroke="#00000022" stroke-width="6"/>
+<ellipse cx="270" cy="187" rx="9" ry="10" fill="#9a6a2c"/><ellipse cx="395" cy="149" rx="9" ry="7" fill="#9a6a2c"/><ellipse cx="431" cy="184" rx="15" ry="7" fill="#9a6a2c"/><ellipse cx="263" cy="243" rx="13" ry="9" fill="#9a6a2c"/><ellipse cx="291" cy="309" rx="10" ry="7" fill="#9a6a2c"/><ellipse cx="284" cy="164" rx="9" ry="9" fill="#9a6a2c"/><ellipse cx="289" cy="159" rx="10" ry="9" fill="#9a6a2c"/><ellipse cx="298" cy="270" rx="15" ry="9" fill="#9a6a2c"/><ellipse cx="194" cy="265" rx="11" ry="10" fill="#9a6a2c"/><ellipse cx="409" cy="173" rx="10" ry="8" fill="#9a6a2c"/><ellipse cx="392" cy="181" rx="9" ry="11" fill="#9a6a2c"/><ellipse cx="303" cy="111" rx="11" ry="11" fill="#9a6a2c"/><ellipse cx="309" cy="305" rx="13" ry="8" fill="#9a6a2c"/>
+</svg>

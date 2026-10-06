@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420">
+<rect width="600" height="420" fill="#f8e6cf"/>
+<circle cx="300" cy="215" r="150" fill="#00000018"/>
+<circle cx="300" cy="205" r="150" fill="#c8873a"/>
+<circle cx="300" cy="205" r="150" fill="none" stroke="#00000022" stroke-width="6"/>
+<ellipse cx="280" cy="299" rx="11" ry="11" fill="#fff0cf"/><ellipse cx="277" cy="276" rx="9" ry="8" fill="#fff0cf"/><ellipse cx="207" cy="205" rx="12" ry="8" fill="#fff0cf"/><ellipse cx="344" cy="249" rx="9" ry="11" fill="#fff0cf"/><ellipse cx="277" cy="113" rx="14" ry="8" fill="#fff0cf"/><ellipse cx="358" cy="181" rx="10" ry="10" fill="#fff0cf"/><ellipse cx="231" cy="305" rx="15" ry="7" fill="#fff0cf"/><ellipse cx="221" cy="268" rx="13" ry="10" fill="#fff0cf"/><ellipse cx="214" cy="143" rx="9" ry="7" fill="#fff0cf"/><ellipse cx="257" cy="308" rx="10" ry="8" fill="#fff0cf"/><ellipse cx="235" cy="184" rx="11" ry="8" fill="#fff0cf"/><ellipse cx="254" cy="156" rx="14" ry="8" fill="#fff0cf"/>
+</svg>

@@ -1,0 +1,493 @@
+/* ==========================================================================
+   Cookie Crumbles - style.css
+   One stylesheet linked from every page:
+   <link rel="stylesheet" href="style.css">
+   ========================================================================== */
+
+/* Fonts (from the proposal: Poppins for headings, clean sans-serif for body) */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Nunito:wght@400;600&display=swap");
+
+
+/* ==========================================================================
+   1. CSS RESET
+   Removes browser default spacing so every browser starts from the same point
+   ========================================================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+
+/* ==========================================================================
+   2. DESIGN TOKENS (CSS variables)
+   Change a value here and it updates across the whole website
+   ========================================================================== */
+:root {
+  /* Colour palette */
+  --color-chocolate: #4a2c1a;   /* primary - headings, header, footer */
+  --color-caramel:   #c8873a;   /* primary - links, borders, highlights */
+  --color-cream:     #fff8ee;   /* page background */
+  --color-blush:     #f4c7c3;   /* accent */
+  --color-gold:      #e0b04b;   /* accent - buttons */
+  --color-white:     #ffffff;
+  --color-text:      #3a2a20;   /* body text */
+  --color-border:    #e8d5bd;
+
+  /* Font families */
+  --font-heading: "Poppins", "Quicksand", Arial, sans-serif;
+  --font-body:    "Nunito", Arial, sans-serif;
+
+  /* Typography scale: base 16px x ratio 1.25 (Major Third) */
+  --text-sm:  0.8rem;     /* 12.8px - small print */
+  --text-base: 1rem;      /* 16px   - body */
+  --text-md:  1.25rem;    /* 20px   - lead text, h5 */
+  --text-lg:  1.563rem;   /* 25px   - h4 */
+  --text-xl:  1.953rem;   /* 31px   - h3 */
+  --text-2xl: 2.441rem;   /* 39px   - h2 */
+  --text-3xl: 3.052rem;   /* 49px   - h1 */
+
+  /* Spacing scale (multiples of 8px) */
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2rem;
+  --space-5: 3rem;
+  --space-6: 4rem;
+
+  /* Other */
+  --radius: 12px;
+  --shadow: 0 4px 12px rgba(74, 44, 26, 0.12);
+  --container: 1200px;
+}
+
+
+/* ==========================================================================
+   3. DEFAULT STYLES FOR THE WHOLE WEBSITE
+   ========================================================================== */
+body {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  color: var(--color-text);
+  background-color: var(--color-cream);
+}
+
+a:hover {
+  color: var(--color-caramel);
+}
+
+/* Visible keyboard focus for accessibility */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--color-gold);
+  outline-offset: 2px;
+}
+
+
+/* ==========================================================================
+   4. TYPOGRAPHY
+   Headings step up the scale; line-height gets tighter as text gets larger
+   ========================================================================== */
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  color: var(--color-chocolate);
+  line-height: 1.2;
+  margin-bottom: var(--space-2);
+}
+
+h1 { font-size: var(--text-3xl); font-weight: 700; }
+h2 { font-size: var(--text-2xl); }
+h3 { font-size: var(--text-xl); }
+h4 { font-size: var(--text-lg); }
+h5 { font-size: var(--text-md); }
+
+p {
+  margin-bottom: var(--space-2);
+  max-width: 70ch;               /* keeps lines comfortable to read */
+}
+
+.lead {
+  font-size: var(--text-md);
+}
+
+small,
+.small-print {
+  font-size: var(--text-sm);
+}
+
+
+/* ==========================================================================
+   5. REUSABLE COMPONENTS
+   ========================================================================== */
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 var(--space-3);
+}
+
+.section {
+  padding: var(--space-6) 0;
+}
+
+.section-alt {
+  background-color: var(--color-white);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.75rem;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  color: var(--color-chocolate);
+  background-color: var(--color-gold);
+  border: 2px solid var(--color-gold);
+  border-radius: 50px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.btn:hover {
+  color: var(--color-white);
+  background-color: var(--color-chocolate);
+  border-color: var(--color-chocolate);
+}
+
+.btn-outline {
+  background-color: transparent;
+  border-color: var(--color-chocolate);
+}
+
+/* Cards (products, testimonials, blog posts) */
+.card {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.card-body {
+  padding: var(--space-3);
+}
+
+.card .price {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  color: var(--color-caramel);
+}
+
+/* Forms (contact page, newsletter) */
+label {
+  display: block;
+  margin-bottom: var(--space-1);
+  font-weight: 600;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  margin-bottom: var(--space-2);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+}
+
+input:focus,
+textarea:focus {
+  border-color: var(--color-caramel);
+}
+
+/* Tables (e.g. price lists) */
+th,
+td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--color-border);
+}
+
+th {
+  color: var(--color-white);
+  background-color: var(--color-chocolate);
+}
+
+
+/* ==========================================================================
+   6. DESKTOP LAYOUT (screens 992px and wider)
+   Uses flexbox (display, flex-direction, justify-content, align-items)
+   and grid for the product cards.
+   ========================================================================== */
+@media (min-width: 992px) {
+
+  /* ----- Header + navigation: logo on the left, links on the right ----- */
+  header {
+    background-color: var(--color-chocolate);
+    color: var(--color-cream);
+    border-bottom: 4px solid var(--color-caramel);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-2) var(--space-3);
+    max-width: var(--container);
+    margin: 0 auto;
+  }
+
+  .logo {
+    font-family: var(--font-heading);
+    font-size: var(--text-lg);
+    font-weight: 700;
+    color: var(--color-gold);
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: var(--space-4);
+  }
+
+  .nav-links a {
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+  }
+
+  .nav-links a:hover,
+  .nav-links a.active {
+    color: var(--color-gold);
+    border-bottom-color: var(--color-gold);
+  }
+
+  /* ----- Hero banner: text on the left, image on the right ----- */
+  .hero {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-5);
+    padding: var(--space-6) var(--space-3);
+    max-width: var(--container);
+    margin: 0 auto;
+  }
+
+  .hero-text {
+    flex: 1;
+  }
+
+  .hero-image {
+    flex: 1;
+    border-radius: var(--radius);
+    border: 6px solid var(--color-blush);
+  }
+
+  /* ----- Product / blog / testimonial cards: 3 columns ----- */
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-4);
+  }
+
+  /* ----- Two-column content (About, Contact) ----- */
+  .two-column {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: var(--space-5);
+  }
+
+  .two-column > * {
+    flex: 1;
+  }
+
+  /* ----- Footer: columns spread evenly across the width ----- */
+  footer {
+    color: var(--color-cream);
+    background-color: var(--color-chocolate);
+    border-top: 4px solid var(--color-caramel);
+    padding: var(--space-5) 0 var(--space-3);
+  }
+
+  .footer-columns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: var(--space-4);
+    max-width: var(--container);
+    margin: 0 auto;
+    padding: 0 var(--space-3);
+  }
+
+  footer h4 {
+    color: var(--color-gold);
+  }
+
+  .footer-bottom {
+    margin-top: var(--space-4);
+    padding-top: var(--space-2);
+    text-align: center;
+    font-size: var(--text-sm);
+    border-top: 1px solid rgba(255, 248, 238, 0.25);
+  }
+}
+
+
+/* ==========================================================================
+   7. EXTRA PAGE STYLES (images, FAQ, page headings, testimonials)
+   ========================================================================== */
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.hero-image {
+  object-fit: cover;
+}
+
+.page-title {
+  padding: var(--space-5) 0 var(--space-3);
+  text-align: center;
+  background-color: var(--color-blush);
+  border-bottom: 4px solid var(--color-caramel);
+}
+
+.page-title p {
+  margin: 0 auto;
+}
+
+.section > .container > h2 {
+  margin-bottom: var(--space-4);
+}
+
+.faq-item {
+  margin-bottom: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-left: 4px solid var(--color-caramel);
+  border-radius: 8px;
+}
+
+.faq-item summary {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  color: var(--color-chocolate);
+  cursor: pointer;
+}
+
+.faq-item p {
+  margin-top: var(--space-1);
+  margin-bottom: 0;
+}
+
+.testimonial {
+  font-style: italic;
+  border-left: 4px solid var(--color-gold);
+}
+
+.testimonial cite {
+  display: block;
+  margin-top: var(--space-1);
+  font-style: normal;
+  font-weight: 600;
+  color: var(--color-caramel);
+}
+
+.contact-details li {
+  margin-bottom: var(--space-1);
+}
+
+.newsletter {
+  text-align: center;
+}
+
+.newsletter p {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.newsletter form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.newsletter input {
+  width: 320px;
+  margin-bottom: 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
