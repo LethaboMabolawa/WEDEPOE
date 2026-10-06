@@ -491,3 +491,46 @@ th {
   overflow: hidden;
   clip: rect(0 0 0 0);
 }
+
+
+/* ==========================================================================
+   8. BUTTON GROUP + SOCIAL ICONS
+   ========================================================================== */
+/* Two hero buttons: same size, with a gap between them */
+.hero-buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+}
+
+.hero-buttons .btn {
+  width: 190px;
+  text-align: center;
+}
+
+/* Social icons */
+.social-links {
+  display: flex;
+  flex-direction: row;
+  gap: var(--space-3);
+}
+
+.social-links a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 56px;
+  height: 56px;
+  color: var(--color-chocolate);
+  background-color: var(--color-white);
+  border: 2px solid var(--color-caramel);
+  border-radius: 50%;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.social-links a:hover {
+  color: var(--color-white);
+  background-color: var(--color-chocolate);
+}
