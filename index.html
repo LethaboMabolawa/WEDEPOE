@@ -3,19 +3,53 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Cookie Crumbles - handcrafted, small-batch cookies.">
-  <title>Home | Cookie Crumbles</title>
+
+  <!-- SEO: title and description (unique on every page) -->
+  <title>Cookie Crumbles | Handcrafted Small-Batch Cookies</title>
+  <meta name="description" content="Handcrafted, small-batch cookies made with real butter and premium ingredients. Shop classic chocolate chip, double chocolate and salted caramel, or order custom boxes.">
+  <meta name="theme-color" content="#8b5a2b">
+  <link rel="canonical" href="https://lethabomabolawa.github.io/WEDEPOE/">
+
+  <!-- Open Graph: link previews on WhatsApp, Facebook, etc. -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Cookie Crumbles | Handcrafted Small-Batch Cookies">
+  <meta property="og:description" content="Premium ingredients, real butter and a lot of love in every cookie.">
+  <meta property="og:url" content="https://lethabomabolawa.github.io/WEDEPOE/">
+  <meta property="og:image" content="https://lethabomabolawa.github.io/WEDEPOE/images/hero-1200.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
   <link rel="stylesheet" href="style.css">
+
+  <!-- SEO: structured data so Google understands this is a local bakery -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Bakery",
+    "name": "Cookie Crumbles",
+    "description": "Handcrafted, small-batch cookies made with premium ingredients.",
+    "url": "https://lethabomabolawa.github.io/WEDEPOE/",
+    "image": "https://lethabomabolawa.github.io/WEDEPOE/images/hero-1200.jpg",
+    "email": "hello@cookiecrumbles.co.za",
+    "telephone": "+27125782847",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "YOUR STREET ADDRESS",
+      "addressLocality": "YOUR TOWN OR CITY",
+      "addressCountry": "ZA"
+    },
+    "openingHours": ["Mo-Fr 08:00-17:00", "Sa 08:00-13:00"]
+  }
+  </script>
 </head>
 <body>
 
   <header>
-    <nav class="nav">
+    <nav class="nav" aria-label="Main navigation">
       <a href="index.html" class="logo">Cookie Crumbles</a>
       <input type="checkbox" id="nav-toggle" class="nav-toggle-input">
       <label for="nav-toggle" class="nav-toggle" aria-label="Open or close the menu"><span></span></label>
       <ul class="nav-links">
-        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="index.html" class="active" aria-current="page">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="shop.html">Shop</a></li>
         <li><a href="blog.html">Blog</a></li>
@@ -35,14 +69,16 @@
           <a href="contact.html" class="btn btn-outline">Custom orders</a>
         </div>
       </div>
+      <!-- Image reference: add your source here, e.g. Surname, I. (Year) Title. Site. Available at: URL (Accessed: date) -->
       <picture class="hero-picture">
         <!-- Phones: tighter square crop -->
         <source media="(max-width: 47.99em)" type="image/webp" srcset="images/hero-square-400.webp 400w, images/hero-square-800.webp 800w" sizes="92vw">
         <source media="(max-width: 47.99em)" srcset="images/hero-square-400.jpg 400w, images/hero-square-800.jpg 800w" sizes="92vw">
         <!-- Tablet and desktop: wide image -->
         <source type="image/webp" srcset="images/hero-400.webp 400w, images/hero-800.webp 800w, images/hero-1200.webp 1200w" sizes="(min-width: 62em) 45vw, 92vw">
+        <!-- Hero image loads first (no lazy loading) -->
         <img class="hero-image" src="images/hero-800.jpg" srcset="images/hero-400.jpg 400w, images/hero-800.jpg 800w, images/hero-1200.jpg 1200w"
-             sizes="(min-width: 62em) 45vw, 92vw" alt="A freshly baked chocolate chip cookie" width="800" height="560">
+             sizes="(min-width: 62em) 45vw, 92vw" alt="A freshly baked chocolate chip cookie" width="800" height="560" fetchpriority="high">
       </picture>
     </section>
 
@@ -51,6 +87,7 @@
         <h2>Featured cookies</h2>
         <div class="card-grid">
         <article class="card">
+          <!-- Image reference: add your source here -->
           <picture>
             <source type="image/webp" srcset="images/chocolate-chip-400.webp 400w, images/chocolate-chip-800.webp 800w, images/chocolate-chip-1200.webp 1200w" sizes="(min-width: 62em) 30vw, (min-width: 48em) 45vw, 92vw">
             <img src="images/chocolate-chip-800.jpg" srcset="images/chocolate-chip-400.jpg 400w, images/chocolate-chip-800.jpg 800w, images/chocolate-chip-1200.jpg 1200w" sizes="(min-width: 62em) 30vw, (min-width: 48em) 45vw, 92vw"
@@ -64,6 +101,7 @@
           </div>
         </article>
         <article class="card">
+          <!-- Image reference: add your source here -->
           <picture>
             <source type="image/webp" srcset="images/double-chocolate-400.webp 400w, images/double-chocolate-800.webp 800w, images/double-chocolate-1200.webp 1200w" sizes="(min-width: 62em) 30vw, (min-width: 48em) 45vw, 92vw">
             <img src="images/double-chocolate-800.jpg" srcset="images/double-chocolate-400.jpg 400w, images/double-chocolate-800.jpg 800w, images/double-chocolate-1200.jpg 1200w" sizes="(min-width: 62em) 30vw, (min-width: 48em) 45vw, 92vw"
@@ -77,6 +115,7 @@
           </div>
         </article>
         <article class="card">
+          <!-- Image reference: add your source here -->
           <picture>
             <source type="image/webp" srcset="images/salted-caramel-400.webp 400w, images/salted-caramel-800.webp 800w, images/salted-caramel-1200.webp 1200w" sizes="(min-width: 62em) 30vw, (min-width: 48em) 45vw, 92vw">
             <img src="images/salted-caramel-800.jpg" srcset="images/salted-caramel-400.jpg 400w, images/salted-caramel-800.jpg 800w, images/salted-caramel-1200.jpg 1200w" sizes="(min-width: 62em) 30vw, (min-width: 48em) 45vw, 92vw"
@@ -138,7 +177,10 @@
       </div>
       <div>
         <h4>Contact</h4>
-        <p>hello@cookiecrumbles.co.za<br>012 578 2847</p>
+        <address>
+          <a href="mailto:hello@cookiecrumbles.co.za">hello@cookiecrumbles.co.za</a><br>
+          <a href="tel:+27125782847">012 578 2847</a>
+        </address>
       </div>
       <div>
         <h4>Follow us</h4>
